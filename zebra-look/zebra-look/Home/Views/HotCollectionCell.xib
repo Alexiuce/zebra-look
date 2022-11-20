@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HotCollectionCell.key" id="gTV-IL-0wX" customClass="HotCollectionCell" customModule="zebra_look" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="176" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="176" height="85"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGg-4p-9iG">
+                        <rect key="frame" x="0.0" y="0.0" width="176" height="85"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBv-1l-p59">
+                                <rect key="frame" x="9.0000000000000036" y="11.666666666666664" width="57.333333333333343" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="Nam-9g-n2i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNi-he-UuU">
+                                <rect key="frame" x="9" y="34.666666666666657" width="155" height="38.333333333333343"/>
+                                <string key="text">一句话介绍商品内容一句话一
+介绍商品内容</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" name="9cGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0.14%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUp-dS-LKJ">
+                                <rect key="frame" x="119" y="10" width="46" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" name="3eRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="fdGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="ZUp-dS-LKJ" firstAttribute="centerY" secondItem="iBv-1l-p59" secondAttribute="centerY" id="8tg-bP-eSW"/>
+                            <constraint firstAttribute="trailing" secondItem="qNi-he-UuU" secondAttribute="trailing" constant="12" id="ENa-E8-00f"/>
+                            <constraint firstItem="iBv-1l-p59" firstAttribute="leading" secondItem="tGg-4p-9iG" secondAttribute="leading" constant="9" id="HYb-F2-vWY"/>
+                            <constraint firstAttribute="bottom" secondItem="qNi-he-UuU" secondAttribute="bottom" constant="12" id="KkQ-Fv-aHv"/>
+                            <constraint firstAttribute="trailing" secondItem="ZUp-dS-LKJ" secondAttribute="trailing" constant="11" id="SOO-Ov-FMs"/>
+                            <constraint firstItem="qNi-he-UuU" firstAttribute="leading" secondItem="iBv-1l-p59" secondAttribute="leading" id="gl6-Nq-fS4"/>
+                            <constraint firstItem="qNi-he-UuU" firstAttribute="top" secondItem="iBv-1l-p59" secondAttribute="bottom" constant="10" id="oRI-fj-ZvL"/>
+                            <constraint firstItem="iBv-1l-p59" firstAttribute="top" secondItem="tGg-4p-9iG" secondAttribute="top" constant="11.5" id="wwi-bn-vB3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="tGg-4p-9iG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="A32-Nr-n7I"/>
+                <constraint firstAttribute="trailing" secondItem="tGg-4p-9iG" secondAttribute="trailing" id="Tpt-h3-fHV"/>
+                <constraint firstItem="tGg-4p-9iG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ULE-fa-aaZ"/>
+                <constraint firstAttribute="bottom" secondItem="tGg-4p-9iG" secondAttribute="bottom" id="dSl-IZ-AQX"/>
+            </constraints>
+            <size key="customSize" width="176" height="85"/>
+            <connections>
+                <outlet property="containerView" destination="tGg-4p-9iG" id="kEv-bb-iVU"/>
+            </connections>
+            <point key="canvasLocation" x="158.46153846153845" y="33.056872037914694"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="3eRedColor">
+            <color red="0.96470588235294119" green="0.18823529411764706" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="9cGrayColor">
+            <color red="0.59215686274509804" green="0.59607843137254901" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="fdGrayColor">
+            <color red="0.95294117647058818" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

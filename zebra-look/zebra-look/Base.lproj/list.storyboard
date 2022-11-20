@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Af-hc-jLt">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--列表-->
+        <scene sceneID="rzQ-Ih-EKx">
+            <objects>
+                <navigationController id="8Af-hc-jLt" customClass="BaseNavViewController" customModule="zebra_look" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="列表" image="custom-icon" selectedImage="custom-icon" id="63g-c9-72E"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7MO-hl-DSy">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gkn-LN-dZ1" kind="relationship" relationship="rootViewController" id="n2K-FZ-XzG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0H-2s-DoU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160" y="758"/>
+        </scene>
+        <!--列表-->
+        <scene sceneID="wAE-ZS-Ktj">
+            <objects>
+                <viewController id="gkn-LN-dZ1" customClass="ListViewController" customModule="zebra_look" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Zj-oj-ApJ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qpx-HV-NXx"/>
+                        <color key="backgroundColor" name="viewBgColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="列表" id="A5H-ay-R4x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRQ-TZ-MT4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="758"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="custom-icon" width="25.666666030883789" height="25"/>
+        <namedColor name="viewBgColor">
+            <color red="0.95294117647058818" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

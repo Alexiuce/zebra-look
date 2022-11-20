@@ -11,11 +11,12 @@ target 'zebra-look' do
   pod 'MJRefresh'
   pod 'Kingfisher'
   pod 'DZNEmptyDataSet'
+  pod 'JXSegmentedView'
+  pod 'JXPagingView/Paging'
   pod 'Alamofire', '~> 5.4'
   pod 'SnapKit', '~> 5.0.0'
   pod 'KakaJSON', '~> 1.1.2'
   pod 'IQKeyboardManagerSwift'
-  
   pod 'FDFullscreenPopGesture', '1.1'
 
 end

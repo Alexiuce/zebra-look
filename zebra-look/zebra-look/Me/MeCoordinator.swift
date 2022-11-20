@@ -22,24 +22,43 @@ extension MeCoordiantor {
    
     
    
+    /** 显示联系我们页面  */
+    public func showOurInfoPage(){
+       let vc = OurInfoController()
+        navContorller?.pushViewController(vc, animated: true)
+    }
+    
     /** 显示设置页面  */
-    public func showSettingsPage(){
+    public func showConfigPage(){
+        let vc = UIStoryboard(name: "ConfigStoryboard", bundle: nil).instantiateViewController(withIdentifier: "me_config")
+    
+        navContorller?.pushViewController(vc, animated: true)
        
     }
     
-    /** 显示重置密码页面  */
-    public func showResetPwdPage(){
-        let vc = UIViewController()
-        vc.modalPresentationStyle = .custom
-        navContorller?.present(vc, animated: true, completion: nil)
-    }
+    /** 显示资料修改页面  */
+    public func showMeModifyPage(){
+        let vc = UIStoryboard(name: "MeModify", bundle: nil).instantiateViewController(withIdentifier: "me_modify")
     
-    
-    /** 显示关于我们页面  */
-    public func showAboutUsPage(){
-        let vc = UIViewController()
         navContorller?.pushViewController(vc, animated: true)
     }
+    
+    /** 显示我的订单页面 */
+    public func showMyOrderPage(){
+        let vc = UIStoryboard(name: "MyOrder", bundle: nil).instantiateViewController(withIdentifier: "my_order")
+    
+        navContorller?.pushViewController(vc, animated: true)
+        
+    }
+    
+    /** 显示购买会员页面 */
+    public func showBecomeMemberPage(){
+        let vc = UIStoryboard(name: "MePurchase", bundle: nil).instantiateViewController(withIdentifier: "me_purchase")
+    
+        navContorller?.pushViewController(vc, animated: true)
+    }
+    
+    
     /** 显示隐私协议页面  */
     public func showPrivacyPage(){
        

@@ -3,6 +3,8 @@ PODS:
   - DZNEmptyDataSet (1.8.1)
   - FDFullscreenPopGesture (1.1)
   - IQKeyboardManagerSwift (6.5.10)
+  - JXPagingView/Paging (2.1.2)
+  - JXSegmentedView (1.3.0)
   - KakaJSON (1.1.2)
   - Kingfisher (7.3.2)
   - MJRefresh (3.7.5)
@@ -13,6 +15,8 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - FDFullscreenPopGesture (= 1.1)
   - IQKeyboardManagerSwift
+  - JXPagingView/Paging
+  - JXSegmentedView
   - KakaJSON (~> 1.1.2)
   - Kingfisher
   - MJRefresh
@@ -24,6 +28,8 @@ SPEC REPOS:
     - DZNEmptyDataSet
     - FDFullscreenPopGesture
     - IQKeyboardManagerSwift
+    - JXPagingView
+    - JXSegmentedView
     - KakaJSON
     - Kingfisher
     - MJRefresh
@@ -34,11 +40,13 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  JXPagingView: 90924b364a2ff7e94db534fad1fa50925ff69ee4
+  JXSegmentedView: fec0d335355b6e019c494fe2e030bde8a36d2df6
   KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
   Kingfisher: 0086ad83719761ba9b2cdaf6ef4d5b4878cbae23
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: da90124b5bafa66d9b385c613d925d255ac9c314
+PODFILE CHECKSUM: 97539c06f074d81efadbd6ce940936a74bbc46b6
 
 COCOAPODS: 1.11.3

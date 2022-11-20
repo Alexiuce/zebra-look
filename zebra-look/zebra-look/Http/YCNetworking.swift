@@ -72,13 +72,13 @@ public class YCNetworking {
         config.timeoutIntervalForRequest = 20  // Timeout interval
         config.timeoutIntervalForResource = 20  // Timeout interval
         
-        #if DEBUG
-        let stm = ServerTrustManager(evaluators: ["testapi.lemonveil.com" : DisabledTrustEvaluator(),
-                                                  "api.lemonveil.com":DisabledTrustEvaluator()])
-        sessionManager = Session(configuration: config,serverTrustManager: stm)
-        #else
+//        #if DEBUG
+//        let stm = ServerTrustManager(evaluators: ["testapi.lemonveil.com" : DisabledTrustEvaluator(),
+//                                                  "api.lemonveil.com":DisabledTrustEvaluator()])
+//        sessionManager = Session(configuration: config,serverTrustManager: stm)
+//        #else
         sessionManager = Session(configuration: config)
-        #endif
+//        #endif
     
     }
 
@@ -286,7 +286,7 @@ public class YCNetworkRequest: Equatable {
                 return
             }
             let modelData = jsonDict.kj.model(StHttpResponseData.self)
-            if modelData.code != 0 {
+            if modelData.code != 200 {
                 NotificationCenter.default.post(name:HttpCodeErrorNotificaton , object:[HttpErrorKeyName:modelData.message])
                 if modelData.code == 100002 { /** token 过期  */
                     NotificationCenter.default.post(name:HttpTokenExpiredNotificaton , object:nil)

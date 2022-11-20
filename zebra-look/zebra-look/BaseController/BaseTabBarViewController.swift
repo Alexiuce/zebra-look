@@ -17,40 +17,17 @@ class BaseTabBarViewController: UITabBarController {
         super.viewDidLoad()
        
         
-        view.backgroundColor = UIColor.white
-        UITabBar.appearance().tintColor = AppConst.redColor
+        view.backgroundColor = AppConst.backgroundColor
+//        UITabBar.appearance().tintColor = AppConst.redColor
         
+        tabBar.standardAppearance.shadowColor = UIColor.red
      
         
     }
     
    
 
-    /** 显示http 相关错误信息  */
-    @objc fileprivate func showHttpMsg(noti: Notification){
-        
-    }
-    /** 显示用户信息： 登录/注册/登出  */
-    @objc fileprivate func showUserMsg(){
-       
-        
-    }
-    
-    /** 用户token 过期  */
-    @objc fileprivate func showUserExpired(){
-        
-    }
-    
-    /** 用户登录后，加载用户信息  */
-    fileprivate func loadUserInfo(){
-        
-    }
+ 
 }
-// MARK: - Http
-extension BaseTabBarViewController {
-    /** 退出账号  */
-    fileprivate func logoutUser(){
-        
-    }
-}
+
 

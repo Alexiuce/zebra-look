@@ -15,7 +15,7 @@ class AppCoordinator : NSObject {
     public var currentNavController: UINavigationController?
     /** 显示页面  */
     public func showFollowAndFansPage(){
-        let vc = ViewController()
+        let vc = UIViewController()
        
         currentNavController?.pushViewController(vc, animated: true)
     }
@@ -25,11 +25,8 @@ class AppCoordinator : NSObject {
 
 // MARK: - App Public Const
 class AppConst {
-    static let redColor =  UIColor(named: "redColor")!
-    static let lineColor = UIColor(named: "lineColor")!
-    static let whiteColor = UIColor(named: "whiteColor")!
-    static let greenColor =  UIColor(named: "appGreenColor")!       
-    static let backgroundColor = UIColor(named: "f6GrayColor")!
-    static let grayTextColor =   UIColor(named: "textGrayColor")!
-    static let normalTextColor = UIColor(named: "titleTextColor")!
+        
+    static let backgroundColor = UIColor(named: "backgroundColor")!
+    static let viewColor = UIColor(named: "viewBgColor")!
+   
 }

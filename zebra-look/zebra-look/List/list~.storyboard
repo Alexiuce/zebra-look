@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ahi-EI-HMj">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Tab Bar View Controller-->
+        <scene sceneID="Wfn-mr-vEf">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ahi-EI-HMj" customClass="BaseTabBarViewController" customModule="zebra_look" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hGG-iD-TIp">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qJ6-gw-95R" kind="relationship" relationship="viewControllers" id="spA-du-l4Q"/>
+                        <segue destination="zew-Vr-5ue" kind="relationship" relationship="viewControllers" id="WIw-Kb-4KB"/>
+                        <segue destination="kwf-45-LFX" kind="relationship" relationship="viewControllers" id="CZC-BS-wNt"/>
+                        <segue destination="8Wg-dc-x0U" kind="relationship" relationship="viewControllers" id="dhs-f2-fLJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GSl-Wd-FZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.84615384615384" y="3.5545023696682461"/>
+        </scene>
+        <!--home-->
+        <scene sceneID="S4W-iT-BXM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="home" id="qJ6-gw-95R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fl2-mL-2bw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLe-0Q-EqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="-97"/>
+        </scene>
+        <!--choice-->
+        <scene sceneID="pg5-Cg-5Kn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="choice" id="zew-Vr-5ue" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="7jY-2p-L0H"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLW-cs-AK0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="4"/>
+        </scene>
+        <!--me-->
+        <scene sceneID="U9a-cL-YmX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="me" id="kwf-45-LFX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1TE-82-Y9J"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUf-a7-fGU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="699" y="93"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Kc8-MB-8fH">
+            <objects>
+                <tableViewController id="yrf-fZ-tOE" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KJO-6n-0ao">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EXu-xu-UYm">
+                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EXu-xu-UYm" id="2Iw-hi-GK2">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yrf-fZ-tOE" id="BNT-CI-WbY"/>
+                            <outlet property="delegate" destination="yrf-fZ-tOE" id="bVT-XH-NCc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="0GB-ry-KmU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rnv-iB-Qwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2592" y="731"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="UKr-h1-kvZ">
+            <objects>
+                <navigationController id="8Wg-dc-x0U" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="jp5-TU-5hr"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1h5-fc-ty0">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yrf-fZ-tOE" kind="relationship" relationship="rootViewController" id="F7v-ci-ey3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JY0-Ce-BSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="731"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -13,6 +13,16 @@ class BaseNavViewController: UINavigationController {
         super.viewDidLoad()
         // 去除底部横线
         navigationBar.shadowImage = UIImage()
+        view.backgroundColor = AppConst.backgroundColor
+
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundImage = UIImage.init()
+        appearance.backgroundColor = .white
+        appearance.shadowColor = .white
+
+        navigationBar.standardAppearance = appearance
+        navigationBar.scrollEdgeAppearance = appearance
+        
       
     }
     
@@ -20,9 +30,10 @@ class BaseNavViewController: UINavigationController {
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
         if viewControllers.count > 0 {
-            let img = UIImage(named: "nav_back_icon")
+            let img = UIImage(named: "left_arrow")
             viewController.hidesBottomBarWhenPushed = true
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(goback))
+            navigationBar.isHidden = false
         }
         
         

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6gv-WC-1XB">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,7 +41,7 @@
         <scene sceneID="zOk-fK-Fzt">
             <objects>
                 <navigationController id="6gv-WC-1XB" customClass="BaseNavViewController" customModule="zebra_look" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="自选" image="star.square.fill" catalog="system" id="7ad-jJ-msI"/>
+                    <tabBarItem key="tabBarItem" title="自选" image="discovery-icon" selectedImage="discovery-icon" id="7ad-jJ-msI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iY4-89-SbE">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -55,7 +56,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star.square.fill" catalog="system" width="128" height="114"/>
+        <image name="discovery-icon" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

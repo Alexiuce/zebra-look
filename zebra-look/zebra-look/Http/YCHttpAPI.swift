@@ -100,27 +100,27 @@ public extension YCNetworking {
     
     fileprivate func generateParam(oriParam: [String: Any]?) -> [String: Any] {
         var p = oriParam ?? [:]
-        p["app_id"] = 3
+        p["app_id"] = "0cb7249f2e"
         
-        p["timestamp"] = Int(Date().timeIntervalSince1970)
-        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            p["app_version"] = version
-        }
+        p["identity"] = "83353fd81b42b3cb45a88334258a1212"
+//        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+//            p["app_version"] = version
+//        }
         
     
-        var temp = p
-        /** 所有value 替换为字符串类型  */
-        p.forEach { (key: String, value: Any) in
-            if let _ = value as? String {}else{
-                temp[key] = "\(value)"
-            }
-        }
-        var signText = ""
-        /** 按key排序 转换json text  */
-        if let jsonData = try? JSONSerialization.data(withJSONObject: temp, options: .sortedKeys),
-           let jsonText = String(data: jsonData, encoding: .utf8) {
-            signText = "\(jsonText)1283181".replacingOccurrences(of: "\\/", with: "/")
-        }
+//        var temp = p
+//        /** 所有value 替换为字符串类型  */
+//        p.forEach { (key: String, value: Any) in
+//            if let _ = value as? String {}else{
+//                temp[key] = "\(value)"
+//            }
+//        }
+//        var signText = ""
+//        /** 按key排序 转换json text  */
+//        if let jsonData = try? JSONSerialization.data(withJSONObject: temp, options: .sortedKeys),
+//           let jsonText = String(data: jsonData, encoding: .utf8) {
+//            signText = "\(jsonText)1283181".replacingOccurrences(of: "\\/", with: "/")
+//        }
 //        p["sign"] = signText.md5()
         return p
     }
