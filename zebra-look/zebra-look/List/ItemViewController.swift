@@ -10,7 +10,10 @@ import JXPagingView
 
 class ItemViewController: UIViewController {
 
-    //
+    // Data
+    
+    fileprivate var count = 10
+    
     var scrollCallback : ((UIScrollView)->())?
     
     // UI
@@ -22,16 +25,14 @@ class ItemViewController: UIViewController {
         let cnib = UINib.init(nibName: ItemViewCell.nibName, bundle: nil)
         tableView.register(cnib, forCellReuseIdentifier: ItemViewCell.reUsedKey)
         
-//        tableView.estimatedRowHeight = 90
-//        tableView.rowHeight = UITableView.automaticDimension
-        tableView.rowHeight = 50
+        
+        let dnib = UINib.init(nibName: ItemFooterCell.nibName, bundle: nil)
+        tableView.register(dnib, forCellReuseIdentifier: ItemFooterCell.reUsedKey)
+        
         if #available(iOS 15.0, *){
             tableView.sectionHeaderTopPadding = 0
         }
-        
     }
-    
-
 }
 
 extension ItemViewController : UITableViewDataSource,UITableViewDelegate {
@@ -41,17 +42,25 @@ extension ItemViewController : UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        30
+        count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ItemViewCell.reUsedKey)!
+        if indexPath.row < count - 1 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: ItemViewCell.reUsedKey)!
+            return cell
+        }
+        let footCell = tableView.dequeueReusableCell(withIdentifier: ItemFooterCell.reUsedKey)!
+        return footCell
         
-        
-        return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        indexPath.row == count - 1 ? 120 : 50
+    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         ListTableSectionHeaderView.loadXibView()
@@ -60,7 +69,14 @@ extension ItemViewController : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         70
     }
-   
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == count - 1 {  // 添加
+            ListCoordiantor.share.showListAdd()
+        }
+        
+    }
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

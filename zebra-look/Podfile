@@ -10,6 +10,7 @@ target 'zebra-look' do
  
   pod 'MJRefresh'
   pod 'Kingfisher'
+  pod 'FSPagerView'
   pod 'DZNEmptyDataSet'
   pod 'JXSegmentedView'
   pod 'JXPagingView/Paging'

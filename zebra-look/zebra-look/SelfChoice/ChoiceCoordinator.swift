@@ -21,6 +21,22 @@ extension ChoiceCoordiantor {
         navController?.popViewController(animated: true)
     }
     
-    /** 显示页面  */
+    /** 显示热点数据解读页面  */
+    public func showHotDataPage(){
+        let vc = ReadHotDataViewController()
+        navController?.pushViewController(vc, animated: true)
+    }
+    
+    /** 显示分类页面 */
+    public func showCategoryPage(){
+        let vc = CategoryViewController()
+        navController?.pushViewController(vc, animated: true)
+    }
+    
+    /** 显示商品页面 */
+    public func showCommodityPage(){
+        let vc = CommodityViewController()
+        navController?.pushViewController(vc, animated: true)
+    }
     
 }

@@ -40,6 +40,7 @@ class ListViewController: UIViewController {
         
         pagingView.mainTableView.gestureDelegate = self
         segmentView.listContainer = pagingView.listContainerView
+        ListCoordiantor.share.navController = navigationController
         
     }
   
@@ -83,7 +84,7 @@ class ListViewController: UIViewController {
     }
     
     @objc fileprivate func clickedEditButton(){
-        print("clicked edit button ..")
+        ListCoordiantor.share.showListEdit()
     }
    
 }
@@ -121,7 +122,7 @@ extension ListViewController : ListTableHeaderViewDelegate {
     
     func listTableHeaderClickedMoreButton(isMore: Bool) {
        
-        headerViewHeight = isMore ? 350 : 148
+        headerViewHeight = isMore ? 319 : 148
         pagingView.resizeTableHeaderViewHeight(animatable: true)
     }
     

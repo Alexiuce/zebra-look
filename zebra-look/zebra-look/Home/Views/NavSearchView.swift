@@ -55,8 +55,6 @@ class NavSearchView: UIView {
     
     @IBAction func clickedButton(_ sender: UIButton) {
         if sender.currentTitle == "关闭" {
-            
-          
             searchTextField.endEditing(true)
             UIView.animate(withDuration: 0.35, delay: 0) {
                 self.cancelButton.isHidden = true

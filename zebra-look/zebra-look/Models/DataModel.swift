@@ -138,14 +138,6 @@ struct STUserAccount: CommonModelProtocol {
     var nickname: String = ""
     /** 头像  */
     var avatar: String = ""
-    /** 粉丝人数  */
-    var fans_total: Int = 0
-    /** 关注人数  */
-    var follow_total: Int = 0
-    
-    /** 是否自动保存草稿  */
-    var isAutoSaveDraft: Bool = false
-    
     
 }
 

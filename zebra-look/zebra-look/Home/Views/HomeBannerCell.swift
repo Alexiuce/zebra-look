@@ -38,7 +38,7 @@ class HomeBannerCell: UITableViewCell {
 // MARK:
 extension HomeBannerCell : UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        6
+        5
     }
    
     

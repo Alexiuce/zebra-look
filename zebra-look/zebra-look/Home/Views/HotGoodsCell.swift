@@ -28,8 +28,6 @@ class HotGoodsCell: UITableViewCell {
         
         let gnib = UINib.init(nibName: HotCollectionCell.nibName, bundle: nil)
         collectionView.register(gnib, forCellWithReuseIdentifier: HotCollectionCell.reUsedKey)
-    
-        
         flowLayout.itemSize = CGSize(width: 166, height: 75)
     }
 
@@ -51,5 +49,10 @@ extension HotGoodsCell : UICollectionViewDelegate,UICollectionViewDataSource,UIC
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        HomeCoordiantor.share.showCommodityPage()
+    }
+    
     
 }

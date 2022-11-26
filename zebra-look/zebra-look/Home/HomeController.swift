@@ -41,7 +41,7 @@ class HomeController: BaseViewController {
         tableView.estimatedRowHeight = 90
         tableView.rowHeight = UITableView.automaticDimension
         
-        
+        HomeCoordiantor.share.navController = navigationController
       
     }
     

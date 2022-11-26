@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CategoryHeadView" customModule="zebra_look" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="355"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0pT-Z2-lYV">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="82"/>
+                    <color key="backgroundColor" name="viewBgColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="82" id="sDq-WG-ffy"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="87i-zy-t10">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="GEY-5c-rcR"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="8i2-k6-uXz"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ax6-HF-8WK">
+                    <rect key="frame" x="0.0" y="81.999999999999986" width="390" height="239.66666666666663"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-img" translatesAutoresizingMaskIntoConstraints="NO" id="Tqy-gY-hjs">
+                            <rect key="frame" x="16" y="17" width="358" height="180"/>
+                            <color key="backgroundColor" name="viewBgColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="180" id="0gi-LB-XC1"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这里显示以上分类形象图片的文字说明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9S7-VZ-khR">
+                            <rect key="frame" x="16" y="211" width="226" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" name="66GrayColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Tqy-gY-hjs" firstAttribute="top" secondItem="ax6-HF-8WK" secondAttribute="top" constant="17" id="74A-JG-vki"/>
+                        <constraint firstItem="9S7-VZ-khR" firstAttribute="top" secondItem="Tqy-gY-hjs" secondAttribute="bottom" constant="14" id="Crp-sH-y89"/>
+                        <constraint firstItem="Tqy-gY-hjs" firstAttribute="leading" secondItem="ax6-HF-8WK" secondAttribute="leading" constant="16" id="afq-2w-4k5"/>
+                        <constraint firstItem="9S7-VZ-khR" firstAttribute="leading" secondItem="ax6-HF-8WK" secondAttribute="leading" constant="16" id="huQ-ur-Iu0"/>
+                        <constraint firstAttribute="height" constant="239.5" id="pj9-Ij-GQD"/>
+                        <constraint firstAttribute="trailing" secondItem="Tqy-gY-hjs" secondAttribute="trailing" constant="16" id="xgq-tJ-ooV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="viewBgColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0pT-Z2-lYV" secondAttribute="trailing" id="DXH-iI-OnI"/>
+                <constraint firstItem="0pT-Z2-lYV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KeE-Vk-zJC"/>
+                <constraint firstAttribute="trailing" secondItem="ax6-HF-8WK" secondAttribute="trailing" id="L4z-d3-LqX"/>
+                <constraint firstItem="ax6-HF-8WK" firstAttribute="top" secondItem="0pT-Z2-lYV" secondAttribute="bottom" id="QNz-KX-yhg"/>
+                <constraint firstItem="0pT-Z2-lYV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jjV-7m-3NI"/>
+                <constraint firstItem="ax6-HF-8WK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xu3-p9-49J"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="0pT-Z2-lYV" id="wTM-6x-f0Y"/>
+                <outlet property="containerView" destination="ax6-HF-8WK" id="U87-LD-PvI"/>
+                <outlet property="flowLayout" destination="87i-zy-t10" id="Odl-iW-Tys"/>
+                <outlet property="imgView" destination="Tqy-gY-hjs" id="Z4D-KC-ixJ"/>
+            </connections>
+            <point key="canvasLocation" x="20" y="-161.72985781990519"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="placeholder-img" width="70" height="33.333332061767578"/>
+        <namedColor name="66GrayColor">
+            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="viewBgColor">
+            <color red="0.95294117647058818" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

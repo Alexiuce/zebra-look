@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChoiceItemCell.key" id="gTV-IL-0wX" customClass="ChoiceItemCell" customModule="zebra_look" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="199" height="82"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="199" height="82"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynH-gn-bMF">
+                        <rect key="frame" x="0.0" y="0.0" width="199" height="82"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cz0-bW-ung">
+                                <rect key="frame" x="8" y="11" width="58" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fho-xH-DNr">
+                                <rect key="frame" x="8" y="36" width="179" height="26.333333333333329"/>
+                                <string key="text">一句话介绍商品内容一句话一
+介绍商品内容</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" name="9cGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+0.14%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9L-v2-3XX">
+                                <rect key="frame" x="142" y="11.666666666666664" width="46" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" name="3eRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="viewBgColor"/>
+                        <constraints>
+                            <constraint firstItem="Cz0-bW-ung" firstAttribute="top" secondItem="ynH-gn-bMF" secondAttribute="top" constant="11" id="1mN-oS-AVr"/>
+                            <constraint firstItem="z9L-v2-3XX" firstAttribute="centerY" secondItem="Cz0-bW-ung" secondAttribute="centerY" id="9BH-Fz-4gH"/>
+                            <constraint firstAttribute="trailing" secondItem="fho-xH-DNr" secondAttribute="trailing" constant="12" id="PmR-Fg-xMB"/>
+                            <constraint firstAttribute="trailing" secondItem="z9L-v2-3XX" secondAttribute="trailing" constant="11" id="YBK-yN-ln2"/>
+                            <constraint firstItem="fho-xH-DNr" firstAttribute="top" secondItem="Cz0-bW-ung" secondAttribute="bottom" constant="8" id="hSs-ta-jpp"/>
+                            <constraint firstItem="fho-xH-DNr" firstAttribute="leading" secondItem="ynH-gn-bMF" secondAttribute="leading" constant="8" id="iPs-Dg-FnR"/>
+                            <constraint firstItem="Cz0-bW-ung" firstAttribute="leading" secondItem="ynH-gn-bMF" secondAttribute="leading" constant="8" id="yPX-kR-ylj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ynH-gn-bMF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DD9-s9-Dke"/>
+                <constraint firstAttribute="trailing" secondItem="ynH-gn-bMF" secondAttribute="trailing" id="U4G-wk-0I7"/>
+                <constraint firstAttribute="bottom" secondItem="ynH-gn-bMF" secondAttribute="bottom" id="pji-Jl-gI8"/>
+                <constraint firstItem="ynH-gn-bMF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qBz-nx-MAj"/>
+            </constraints>
+            <size key="customSize" width="199" height="82"/>
+            <connections>
+                <outlet property="containerView" destination="ynH-gn-bMF" id="qFd-JM-PhA"/>
+            </connections>
+            <point key="canvasLocation" x="108.46153846153845" y="31.990521327014218"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="3eRedColor">
+            <color red="0.96470588235294119" green="0.18823529411764706" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="9cGrayColor">
+            <color red="0.59200000762939453" green="0.59600001573562622" blue="0.6119999885559082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="viewBgColor">
+            <color red="0.95294117647058818" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

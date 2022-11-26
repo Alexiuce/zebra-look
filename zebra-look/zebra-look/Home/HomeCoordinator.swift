@@ -22,6 +22,10 @@ extension HomeCoordiantor {
         navController?.popViewController(animated: true)
     }
     
-    /** 显示页面  */
+    /** 显示商品页面  */
+    public func showCommodityPage(){
+        let vc = CategoryViewController()
+        navController?.pushViewController(vc, animated: true)
+    }
     
 }
