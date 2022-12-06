@@ -11,31 +11,26 @@ import JXPagingView
 import JXSegmentedView
 
 class CategoryViewController: UIViewController {
-
-    
     
     let headerViewHeight = 338
     var segmentTitles = ["核心数据","预期管理","数据动态","相关商品"]
     
     lazy var pagingView: JXPagingView = preferredPagingview()
+    lazy var rightItemView: UIView = preferredRightItemView()
+    lazy var userHeaderView: UIView = preferredTableHeaderView()
     lazy var segmentView: JXSegmentedView = preferredSegmentView()
     let dataSource: JXSegmentedTitleDataSource = JXSegmentedTitleDataSource()
-    lazy var userHeaderView: UIView = preferredTableHeaderView()
-    lazy var rightItemView: UIView = preferredRightItemView()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "分类"
-        
-        
-        
-        navigationController?.navigationBar.isTranslucent = false
+    
         view.addSubview(pagingView)
         pagingView.mainTableView.backgroundColor = AppConst.viewColor
         pagingView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        navigationController?.navigationBar.isTranslucent = false
         
         
         dataSource.titles = segmentTitles
@@ -101,11 +96,9 @@ extension CategoryViewController: JXPagingViewDelegate{
         case 2 : return DataFeedViewController()
         case 3 : return RelatedProductController()
         default:
-            let itemVc = ItemViewController()
-            return itemVc
+            let vc = PredictManagerController()
+            return vc
         }
-        
-        
     }
     
     func tableHeaderViewHeight(in pagingView: JXPagingView) -> Int {

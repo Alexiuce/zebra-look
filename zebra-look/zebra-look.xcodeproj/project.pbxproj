@@ -41,6 +41,8 @@
 		F24F421A292F489C000EA13A /* HotDataTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24F4218292F489C000EA13A /* HotDataTextCell.xib */; };
 		F24F421D292F48B3000EA13A /* HotDataMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24F421B292F48B3000EA13A /* HotDataMediaCell.swift */; };
 		F24F421E292F48B3000EA13A /* HotDataMediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24F421C292F48B3000EA13A /* HotDataMediaCell.xib */; };
+		F2549CA8293C83F50026F774 /* AllPredictDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2549CA7293C83F50026F774 /* AllPredictDataSource.swift */; };
+		F2549CAA293CA8140026F774 /* DoingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2549CA9293CA8140026F774 /* DoingDataSource.swift */; };
 		F27173E5292C95E50009A7FB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27173E4292C95E50009A7FB /* UIView+Extension.swift */; };
 		F2779F3A292BB6170011BAD1 /* ListEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2779F38292BB6170011BAD1 /* ListEditCell.swift */; };
 		F2779F3B292BB6170011BAD1 /* ListEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2779F39292BB6170011BAD1 /* ListEditCell.xib */; };
@@ -97,13 +99,13 @@
 		F2CA7E5D28FBD69C0037C4E6 /* MyOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CA7E5C28FBD69C0037C4E6 /* MyOrder.storyboard */; };
 		F2CA7E5F28FBDE6D0037C4E6 /* MePurchase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CA7E5E28FBDE6D0037C4E6 /* MePurchase.storyboard */; };
 		F2CA7E6128FBDE860037C4E6 /* MemberPurchaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA7E6028FBDE860037C4E6 /* MemberPurchaseController.swift */; };
+		F2D6865229333E4100312B2E /* PredictManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6865029333E4100312B2E /* PredictManagerController.swift */; };
+		F2D6865329333E4100312B2E /* PredictManagerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D6865129333E4100312B2E /* PredictManagerController.xib */; };
 		F2DB509128F5B9AA00985779 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB509028F5B9AA00985779 /* Shadow.swift */; };
 		F2E5FAB328F457400051F124 /* BusinessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5FAB128F457400051F124 /* BusinessCollectionViewCell.swift */; };
 		F2E5FAB428F457400051F124 /* BusinessCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E5FAB228F457400051F124 /* BusinessCollectionViewCell.xib */; };
 		F2EE92822931C0F000C73052 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE92802931C0F000C73052 /* CategoryViewController.swift */; };
-		F2EE92832931C0F000C73052 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2EE92812931C0F000C73052 /* CategoryViewController.xib */; };
 		F2EE92862931C13300C73052 /* CommodityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE92842931C13300C73052 /* CommodityViewController.swift */; };
-		F2EE92872931C13300C73052 /* CommodityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2EE92852931C13300C73052 /* CommodityViewController.xib */; };
 		F2EE928A2931D13E00C73052 /* CategoryHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE92892931D13E00C73052 /* CategoryHeadView.swift */; };
 		F2EE928C2931D14E00C73052 /* CategoryHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2EE928B2931D14E00C73052 /* CategoryHeadView.xib */; };
 		F2EE928F2931D47D00C73052 /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EE928D2931D47D00C73052 /* CategoryCollectionCell.swift */; };
@@ -166,6 +168,8 @@
 		F24F4218292F489C000EA13A /* HotDataTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotDataTextCell.xib; sourceTree = "<group>"; };
 		F24F421B292F48B3000EA13A /* HotDataMediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotDataMediaCell.swift; sourceTree = "<group>"; };
 		F24F421C292F48B3000EA13A /* HotDataMediaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotDataMediaCell.xib; sourceTree = "<group>"; };
+		F2549CA7293C83F50026F774 /* AllPredictDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPredictDataSource.swift; sourceTree = "<group>"; };
+		F2549CA9293CA8140026F774 /* DoingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingDataSource.swift; sourceTree = "<group>"; };
 		F27173E4292C95E50009A7FB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F2779F38292BB6170011BAD1 /* ListEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEditCell.swift; sourceTree = "<group>"; };
 		F2779F39292BB6170011BAD1 /* ListEditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListEditCell.xib; sourceTree = "<group>"; };
@@ -224,13 +228,13 @@
 		F2CA7E5C28FBD69C0037C4E6 /* MyOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyOrder.storyboard; sourceTree = "<group>"; };
 		F2CA7E5E28FBDE6D0037C4E6 /* MePurchase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MePurchase.storyboard; sourceTree = "<group>"; };
 		F2CA7E6028FBDE860037C4E6 /* MemberPurchaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPurchaseController.swift; sourceTree = "<group>"; };
+		F2D6865029333E4100312B2E /* PredictManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictManagerController.swift; sourceTree = "<group>"; };
+		F2D6865129333E4100312B2E /* PredictManagerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PredictManagerController.xib; sourceTree = "<group>"; };
 		F2DB509028F5B9AA00985779 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		F2E5FAB128F457400051F124 /* BusinessCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCollectionViewCell.swift; sourceTree = "<group>"; };
 		F2E5FAB228F457400051F124 /* BusinessCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCollectionViewCell.xib; sourceTree = "<group>"; };
 		F2EE92802931C0F000C73052 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		F2EE92812931C0F000C73052 /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
 		F2EE92842931C13300C73052 /* CommodityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommodityViewController.swift; sourceTree = "<group>"; };
-		F2EE92852931C13300C73052 /* CommodityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommodityViewController.xib; sourceTree = "<group>"; };
 		F2EE92892931D13E00C73052 /* CategoryHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeadView.swift; sourceTree = "<group>"; };
 		F2EE928B2931D14E00C73052 /* CategoryHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryHeadView.xib; sourceTree = "<group>"; };
 		F2EE928D2931D47D00C73052 /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
@@ -322,6 +326,15 @@
 				F2CA7E6028FBDE860037C4E6 /* MemberPurchaseController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F2549CA6293C83980026F774 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				F2549CA9293CA8140026F774 /* DoingDataSource.swift */,
+				F2549CA7293C83F50026F774 /* AllPredictDataSource.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		F290EC3729179734008E3802 /* views */ = {
@@ -508,19 +521,20 @@
 		F2C1BAB7292E467400FC3AB4 /* subControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F2549CA6293C83980026F774 /* DataSources */,
 				F2EE92882931C23A00C73052 /* subViews */,
 				F24F4207292F1ABB000EA13A /* ReadHotDataViewController.swift */,
 				F24F4208292F1ABB000EA13A /* ReadHotDataViewController.xib */,
 				F2EE92802931C0F000C73052 /* CategoryViewController.swift */,
-				F2EE92812931C0F000C73052 /* CategoryViewController.xib */,
 				F2EE92842931C13300C73052 /* CommodityViewController.swift */,
-				F2EE92852931C13300C73052 /* CommodityViewController.xib */,
 				F2EE92912931F12700C73052 /* CoreDataViewController.swift */,
 				F2EE92922931F12700C73052 /* CoreDataViewController.xib */,
 				F2EE92A12932018000C73052 /* DataFeedViewController.swift */,
 				F2EE92A22932018000C73052 /* DataFeedViewController.xib */,
 				F2EE92A529325A5800C73052 /* RelatedProductController.swift */,
 				F2EE92A629325A5800C73052 /* RelatedProductController.xib */,
+				F2D6865029333E4100312B2E /* PredictManagerController.swift */,
+				F2D6865129333E4100312B2E /* PredictManagerController.xib */,
 			);
 			path = subControllers;
 			sourceTree = "<group>";
@@ -630,7 +644,6 @@
 				F2CA7E5F28FBDE6D0037C4E6 /* MePurchase.storyboard in Resources */,
 				F24F420A292F1ABB000EA13A /* ReadHotDataViewController.xib in Resources */,
 				F24F420E292F1F39000EA13A /* HotDataTitleCell.xib in Resources */,
-				F2EE92872931C13300C73052 /* CommodityViewController.xib in Resources */,
 				F2EE92AC29325AAC00C73052 /* RelatedProductCell.xib in Resources */,
 				F2B6979928F7029000DE7B64 /* MeNormalCell.xib in Resources */,
 				F290EC3B29179754008E3802 /* ItemViewCell.xib in Resources */,
@@ -644,7 +657,7 @@
 				F2EE92902931D47D00C73052 /* CategoryCollectionCell.xib in Resources */,
 				F2AFD601290E1F550038B1D4 /* HomeDataCell.xib in Resources */,
 				F2E5FAB428F457400051F124 /* BusinessCollectionViewCell.xib in Resources */,
-				F2EE92832931C0F000C73052 /* CategoryViewController.xib in Resources */,
+				F2D6865329333E4100312B2E /* PredictManagerController.xib in Resources */,
 				F205EAC5292A40220022ABDA /* ListTableSectionHeaderView.xib in Resources */,
 				F24F4212292F3850000EA13A /* HotDataBottomCell.xib in Resources */,
 				F2F46D0528F1A17B00A5A203 /* HomeBannerCell.xib in Resources */,
@@ -733,7 +746,9 @@
 				F2779F3A292BB6170011BAD1 /* ListEditCell.swift in Sources */,
 				F2AFD60C290E67880038B1D4 /* NavSearchView.swift in Sources */,
 				F205EAC3292A40120022ABDA /* ListTableSectionHeaderView.swift in Sources */,
+				F2549CAA293CA8140026F774 /* DoingDataSource.swift in Sources */,
 				F2A08CAE28EAF616005977F2 /* AppCoordinator.swift in Sources */,
+				F2D6865229333E4100312B2E /* PredictManagerController.swift in Sources */,
 				F2AFD608290E5C1A0038B1D4 /* ZBPageControl.swift in Sources */,
 				F205EAC1292A2B220022ABDA /* ListTableHeaderView.swift in Sources */,
 				F2F46D0428F1A17B00A5A203 /* HomeBannerCell.swift in Sources */,
@@ -792,6 +807,7 @@
 				F226C855292CF35D006CC998 /* ListAddViewController.swift in Sources */,
 				F2B6979C28F702A300DE7B64 /* MeInfoCell.swift in Sources */,
 				F2A1E4A7292B552500A3E14F /* ListEditViewController.swift in Sources */,
+				F2549CA8293C83F50026F774 /* AllPredictDataSource.swift in Sources */,
 				F2E5FAB328F457400051F124 /* BusinessCollectionViewCell.swift in Sources */,
 				F2AFD600290E1F550038B1D4 /* HomeDataCell.swift in Sources */,
 				F2EE928A2931D13E00C73052 /* CategoryHeadView.swift in Sources */,
