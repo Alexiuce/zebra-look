@@ -15,9 +15,25 @@ class OptionsCollectionViewCell: FSPagerViewCell {
     static let reUsedKey = "OptionsCollectionViewCell.key"
     
     
+    // Data
+    var cellData: OpinionData? {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    // UI
+    
+    @IBOutlet weak var contentLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    fileprivate func updateUI(){
+        
+        contentLabel.text = cellData?.content
     }
 
 }

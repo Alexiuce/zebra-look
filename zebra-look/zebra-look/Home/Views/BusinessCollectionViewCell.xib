@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,37 +19,75 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rN-WF-tAc">
-                        <rect key="frame" x="10" y="10" width="152" height="152"/>
+                        <rect key="frame" x="0.0" y="0.0" width="172" height="172"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="paT-lz-kZK">
+                                <rect key="frame" x="0.0" y="0.0" width="172" height="172"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新能源" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPz-h1-Pjk">
                                 <rect key="frame" x="10" y="11.999999999999998" width="49" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="国内国外新能源 汽车各显神通" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUA-1y-EQv">
+                                <rect key="frame" x="10" y="35.333333333333336" width="150" height="13.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YR-vt-M3X">
+                                <rect key="frame" x="11" y="136" width="68" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="JQM-7v-z8P"/>
+                                    <constraint firstAttribute="width" constant="68" id="LEC-wn-7vX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="去瞧瞧">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="pPz-h1-Pjk" firstAttribute="leading" secondItem="9rN-WF-tAc" secondAttribute="leading" constant="10" id="7aK-DP-yR7"/>
+                            <constraint firstAttribute="bottom" secondItem="paT-lz-kZK" secondAttribute="bottom" id="88X-tR-Har"/>
+                            <constraint firstAttribute="trailing" secondItem="qUA-1y-EQv" secondAttribute="trailing" constant="12" id="DYh-pc-u55"/>
                             <constraint firstItem="pPz-h1-Pjk" firstAttribute="top" secondItem="9rN-WF-tAc" secondAttribute="top" constant="12" id="EOZ-po-Zfa"/>
+                            <constraint firstItem="paT-lz-kZK" firstAttribute="top" secondItem="9rN-WF-tAc" secondAttribute="top" id="G3N-Bn-Bse"/>
+                            <constraint firstItem="qUA-1y-EQv" firstAttribute="leading" secondItem="9rN-WF-tAc" secondAttribute="leading" constant="10" id="QP9-gY-uec"/>
+                            <constraint firstItem="4YR-vt-M3X" firstAttribute="leading" secondItem="9rN-WF-tAc" secondAttribute="leading" constant="11" id="ROa-z6-Ea7"/>
+                            <constraint firstItem="paT-lz-kZK" firstAttribute="leading" secondItem="9rN-WF-tAc" secondAttribute="leading" id="T1g-U6-Aze"/>
+                            <constraint firstAttribute="bottom" secondItem="4YR-vt-M3X" secondAttribute="bottom" constant="11" id="YFj-N3-KDO"/>
+                            <constraint firstAttribute="trailing" secondItem="paT-lz-kZK" secondAttribute="trailing" id="gq7-eK-Kjt"/>
+                            <constraint firstItem="qUA-1y-EQv" firstAttribute="top" secondItem="pPz-h1-Pjk" secondAttribute="bottom" constant="4" id="kAA-us-5SQ"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="9rN-WF-tAc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Euk-iG-aRV"/>
-                <constraint firstAttribute="trailing" secondItem="9rN-WF-tAc" secondAttribute="trailing" constant="10" id="lPr-YG-CJW"/>
-                <constraint firstItem="9rN-WF-tAc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="oTs-IA-Ajv"/>
-                <constraint firstAttribute="bottom" secondItem="9rN-WF-tAc" secondAttribute="bottom" constant="10" id="yGS-68-Ea8"/>
+                <constraint firstItem="9rN-WF-tAc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Euk-iG-aRV"/>
+                <constraint firstAttribute="trailing" secondItem="9rN-WF-tAc" secondAttribute="trailing" id="lPr-YG-CJW"/>
+                <constraint firstItem="9rN-WF-tAc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oTs-IA-Ajv"/>
+                <constraint firstAttribute="bottom" secondItem="9rN-WF-tAc" secondAttribute="bottom" id="yGS-68-Ea8"/>
             </constraints>
             <size key="customSize" width="172" height="172"/>
             <connections>
+                <outlet property="backgroundImgView" destination="paT-lz-kZK" id="K4O-uo-iUc"/>
                 <outlet property="containerView" destination="9rN-WF-tAc" id="f16-FS-i3i"/>
+                <outlet property="infoLabel" destination="qUA-1y-EQv" id="HcP-aN-9Th"/>
+                <outlet property="nameLabel" destination="pPz-h1-Pjk" id="P6V-c8-ZeC"/>
+                <outlet property="opButton" destination="4YR-vt-M3X" id="v9x-bJ-K2N"/>
             </connections>
             <point key="canvasLocation" x="247.69230769230768" y="42.654028436018955"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

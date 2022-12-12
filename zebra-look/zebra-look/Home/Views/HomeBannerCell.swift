@@ -7,11 +7,40 @@
 
 import UIKit
 
+
+
+/** Banner 数据 */
+struct BannerCellData: CommonModelProtocol {
+
+    /** id */
+    let id : Int = 0
+    /** name  */
+    let name : String = ""
+    /** image url */
+    let img : String = ""
+    /** position */
+    let position : Int = 0
+    /** link */
+    let link : String = ""
+    /** sort */
+    let sort : String = ""
+}
+
+
 class HomeBannerCell: UITableViewCell {
 
     
     static let nibName = "HomeBannerCell"
     static let reUsedKey = "HomeBannerCell.key"
+    
+    
+    // Data
+    var bannerList:[BannerCellData]? {
+        didSet{
+            collectionView.reloadData()
+            pageControl.numberOfPages = bannerList?.count ?? 0
+        }
+    }
     
     
     // UI
@@ -30,7 +59,7 @@ class HomeBannerCell: UITableViewCell {
         flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 85)
     }
 
-
+    
     
 }
 
@@ -38,12 +67,14 @@ class HomeBannerCell: UITableViewCell {
 // MARK:
 extension HomeBannerCell : UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        bannerList?.count ?? 0
     }
    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCollectionCell.reUsedKey, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCollectionCell.reUsedKey, for: indexPath) as! BannerCollectionCell
+        
+        cell.cellData = bannerList?[indexPath.item]
         return cell
     }
   

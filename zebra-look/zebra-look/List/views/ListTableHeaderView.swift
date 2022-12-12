@@ -14,12 +14,37 @@ protocol ListTableHeaderViewDelegate: NSObject {
 }
 
 
+/** 观点 数据 */
+struct OpinionData: CommonModelProtocol {
+    /** id */
+    let id : Int = 0
+    /** stock id  */
+    let block_id : Int = 0
+    /** content  */
+    let content : String = ""
+    /** type :  1-我方观点； 2-对方观点  */
+    let type : Int = 0
+}
+
+
 class ListTableHeaderView: UIView {
     
     // Data
-    public weak var delegate: ListTableHeaderViewDelegate?
-    // UI
     
+    var ourOpinions:[OpinionData]? {
+        didSet {
+            updateUI()
+        }
+    }
+    var otherOpinions:[OpinionData]? {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    public weak var delegate: ListTableHeaderViewDelegate?
+    
+    // UI
     @IBOutlet weak var moreButton: UIButton!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var stackView: UIStackView!
@@ -47,13 +72,13 @@ class ListTableHeaderView: UIView {
         otherOpinionPageViiew.register(gnib, forCellWithReuseIdentifier: OptionsCollectionViewCell.reUsedKey)
         
         
-        ourPageControl.numberOfPages = 3
+      
         ourPageControl.activeColor = UIColor(named: "listPageSelectedColor")!
         ourPageControl.inactiveColor = UIColor(named: "listPageNormalColor")!
         ourPageControl.activeSize = CGSize(width: 12.5, height: 4)
         ourPageControl.inactiveSize = CGSize(width: 8.5, height: 4)
         
-        othersPageControl.numberOfPages = 3
+       
         othersPageControl.activeColor = UIColor(named: "listPageSelectedColor")!
         othersPageControl.inactiveColor = UIColor(named: "listPageNormalColor")!
         othersPageControl.activeSize = CGSize(width: 12.5, height: 4)
@@ -71,20 +96,24 @@ class ListTableHeaderView: UIView {
     }
     
     
+    fileprivate func updateUI(){
+        ourPageControl.numberOfPages = ourOpinions?.count ?? 0
+        othersPageControl.numberOfPages = otherOpinions?.count ?? 0
+        ourOpinionPageView.reloadData()
+        otherOpinionPageViiew.reloadData()
+    }
+    
     @IBAction func clickedMoreButton(_ sender: UIButton) {
         
         sender.isSelected = !sender.isSelected
         delegate?.listTableHeaderClickedMoreButton(isMore: sender.isSelected)
         
         let delay = sender.isSelected ? 0.1 : 0
-        let duration = sender.isSelected ? 0.25 : 0.05
- 
         UIView.animate(withDuration: 0.25, delay: delay) {
             
             self.moreContainerView.alpha = sender.isSelected ? 1 : 0
         }
        
-        
         UIView.animate(withDuration: 0.35) {
             sender.transform = sender.isSelected ? CGAffineTransformMakeRotation(.pi) : CGAffineTransform.identity
             self.subTitleLabel.alpha = sender.isSelected ? 0 : 1
@@ -97,19 +126,29 @@ class ListTableHeaderView: UIView {
 
 extension ListTableHeaderView: FSPagerViewDataSource, FSPagerViewDelegate {
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        3
+        if pagerView == ourOpinionPageView {
+            return ourOpinions?.count ?? 0
+        }
+        return otherOpinions?.count ?? 0
     }
     
     func pagerView(_ pagerView:FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: OptionsCollectionViewCell.reUsedKey, at: index)
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: OptionsCollectionViewCell.reUsedKey, at: index) as! OptionsCollectionViewCell
+        
+        if pagerView == ourOpinionPageView {
+            cell.cellData = ourOpinions?[index]
+        }else{
+            cell.cellData = otherOpinions?[index]
+        }
         return cell
     }
     
-    
-    
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
-  
-        ourPageControl.currentPage = targetIndex
+        if pagerView == ourOpinionPageView {
+            ourPageControl.currentPage = targetIndex
+        }else{
+            othersPageControl.currentPage = targetIndex
+        }
     }
     
     

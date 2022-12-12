@@ -23,7 +23,7 @@
                             <fragment content="公司决定于">
                                 <attributes>
                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                    <font key="NSFont" metaFont="system" size="14"/>
                                     <font key="NSOriginalFont" metaFont="system" size="14"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
@@ -38,7 +38,7 @@
                             <fragment content="年">
                                 <attributes>
                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                    <font key="NSFont" metaFont="system" size="14"/>
                                     <font key="NSOriginalFont" metaFont="system" size="14"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
@@ -53,7 +53,7 @@
                             <fragment content="新增加两条生产线，投产后可提公司">
                                 <attributes>
                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                    <font key="NSFont" metaFont="system" size="14"/>
                                     <font key="NSOriginalFont" metaFont="system" size="14"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
@@ -68,7 +68,7 @@
                             <fragment content="万箱产能。">
                                 <attributes>
                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                                    <font key="NSFont" metaFont="system" size="14"/>
                                     <font key="NSOriginalFont" metaFont="system" size="14"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
@@ -85,6 +85,9 @@
                 <constraint firstItem="ip8-fH-xM2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Zsg-XY-bn7"/>
             </constraints>
             <size key="customSize" width="303" height="93"/>
+            <connections>
+                <outlet property="contentLabel" destination="ip8-fH-xM2" id="ypc-ai-Nwd"/>
+            </connections>
             <point key="canvasLocation" x="199.23076923076923" y="20.971563981042653"/>
         </collectionViewCell>
     </objects>

@@ -17,9 +17,9 @@ class ListViewController: UIViewController {
     var segmentTitles = ["默认","商品","分类"]
     var headerViewHeight = 148
     lazy var pagingView: JXPagingView = preferredPagingview()
+    lazy var userHeaderView: ListTableHeaderView = preferredTableHeaderView()
     lazy var segmentView: JXSegmentedView = preferredSegmentView()
     let dataSource: JXSegmentedTitleDataSource = JXSegmentedTitleDataSource()
-    lazy var userHeaderView: UIView = preferredTableHeaderView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,8 @@ class ListViewController: UIViewController {
         pagingView.mainTableView.gestureDelegate = self
         segmentView.listContainer = pagingView.listContainerView
         ListCoordiantor.share.navController = navigationController
+        
+        loadOpinions()
         
     }
   
@@ -77,7 +79,7 @@ class ListViewController: UIViewController {
         
         return segment
     }
-    fileprivate func preferredTableHeaderView() -> UIView {
+    fileprivate func preferredTableHeaderView() -> ListTableHeaderView {
         let headerView =  ListTableHeaderView.loadXibView()
         headerView.delegate = self
         return headerView
@@ -85,6 +87,19 @@ class ListViewController: UIViewController {
     
     @objc fileprivate func clickedEditButton(){
         ListCoordiantor.share.showListEdit()
+    }
+    
+    /** 加载观点数据 */
+    fileprivate func loadOpinions(){
+        
+        YC.fetch(API.List.fetchOpinion,parameters: ["type":1]).success {[weak self] resp in
+            guard let data = resp.data as? JsonArray else { return }
+            self?.userHeaderView.ourOpinions = OpinionData.modelsWithDicts(data)
+        }
+        YC.fetch(API.List.fetchOpinion,parameters: ["type":2]).success { resp in
+            guard let data = resp.data as? JsonArray else { return }
+            self.userHeaderView.otherOpinions = OpinionData.modelsWithDicts(data)
+        }
     }
    
 }

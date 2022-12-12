@@ -143,13 +143,14 @@ struct STUserAccount: CommonModelProtocol {
 
 // MARK: - ** 分页列表数据  *
 
-struct STPageData <Element>: CommonModelProtocol {
-    var list:Element? = nil
-    var page: STPageInfoData? = nil
+struct ZBPageData <Element>: CommonModelProtocol {
+    var items:Element? = nil
+    var pageInfo: ZBPageInfoData? = nil
 }
-struct STPageInfoData: Convertible {
-    var current_page : Int = 0
-    var total_page: Int = 0
+struct ZBPageInfoData: Convertible {
+    var currentPage : Int = 0
+    var total: Int = 0
+    var totalPage: Int = 0
 }
 
 

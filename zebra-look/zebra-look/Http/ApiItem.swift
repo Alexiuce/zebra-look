@@ -69,9 +69,9 @@ struct API {
         static let fetchDataList = APIItem("home.data.message", d: "数据动态", m: .get)
        
     }
-    // MARK: - 资讯模块
-    struct News {
-       
+    // MARK: - 列表模块
+    struct List {
+        static let fetchOpinion = APIItem("choice.get.vewpoint.list", d: "获取观点", m: .get)
     }
     //MARK: - 工具模块
     struct Tools {

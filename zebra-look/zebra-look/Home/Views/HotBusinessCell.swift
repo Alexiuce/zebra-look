@@ -7,16 +7,45 @@
 
 import UIKit
 
+
+/** 热门行业 数据 */
+struct HotBusinessData: CommonModelProtocol {
+
+    /** id */
+    let id : Int = 0
+    /** bock id  */
+    let block_id : Int = 0
+    /** Hot business intro  */
+    let intro : String = ""
+    /** hot business name  */
+    let name : String = ""
+    /** hot business code  */
+    let code : String = ""
+    /** hot business type */
+    let type : Int = 0
+    /** img url */
+    let img : String = ""
+    /** sort */
+    let sort : Int = 0
+}
+
+
 class HotBusinessCell: UITableViewCell {
 
     static let nibName = "HotBusinessCell"
     static let reUsedKey = "HotBusinessCell.key"
     
     
+    // Data
+    var dataList: [HotBusinessData]? {
+        didSet {
+            p_updateUI()
+        }
+    }
+    
+    // UI
     @IBOutlet weak var containerView: ZBGradientView!
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     override func awakeFromNib() {
@@ -36,6 +65,9 @@ class HotBusinessCell: UITableViewCell {
         
     }
 
+    fileprivate func  p_updateUI(){
+        collectionView.reloadData()
+    }
     
     
 }
@@ -43,12 +75,14 @@ class HotBusinessCell: UITableViewCell {
 // MARK:
 extension HotBusinessCell : UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        6
+        dataList?.count ?? 0
     }
    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BusinessCollectionViewCell.reUsedKey, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BusinessCollectionViewCell.reUsedKey, for: indexPath) as! BusinessCollectionViewCell
+        
+        cell.cellData = dataList?[indexPath.item]
         return cell
     }
   

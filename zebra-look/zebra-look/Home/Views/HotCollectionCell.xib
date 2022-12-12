@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -66,6 +67,9 @@
             <size key="customSize" width="176" height="85"/>
             <connections>
                 <outlet property="containerView" destination="tGg-4p-9iG" id="kEv-bb-iVU"/>
+                <outlet property="infoLabel" destination="qNi-he-UuU" id="vIc-6i-mXg"/>
+                <outlet property="nameLabel" destination="iBv-1l-p59" id="ZHG-Pc-SSp"/>
+                <outlet property="priceLabel" destination="ZUp-dS-LKJ" id="wdQ-oo-qU0"/>
             </connections>
             <point key="canvasLocation" x="158.46153846153845" y="33.056872037914694"/>
         </collectionViewCell>
@@ -75,10 +79,10 @@
             <color red="0.96470588235294119" green="0.18823529411764706" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="9cGrayColor">
-            <color red="0.59215686274509804" green="0.59607843137254901" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.59200000762939453" green="0.59600001573562622" blue="0.6119999885559082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="fdGrayColor">
-            <color red="0.95294117647058818" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.95300000905990601" green="0.96100002527236938" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

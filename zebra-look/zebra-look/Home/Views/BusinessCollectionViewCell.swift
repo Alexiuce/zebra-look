@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BusinessCollectionViewCell: UICollectionViewCell {
     
@@ -13,7 +14,22 @@ class BusinessCollectionViewCell: UICollectionViewCell {
     static let nibName = "BusinessCollectionViewCell"
     static let reUsedKey = "BusinessCollectionViewCell.key"
     
+    // Data
+    
+    var cellData: HotBusinessData? {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    
+    // UI
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var opButton: UIButton!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var backgroundImgView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +42,16 @@ class BusinessCollectionViewCell: UICollectionViewCell {
         containerView.layer.shadowOpacity = 0.2
         containerView.km_ApplyShadow()
        
+        opButton.layer.cornerRadius = 12.5
+        opButton.layer.masksToBounds = true
+        
+    }
+    fileprivate func updateUI(){
+        nameLabel.text = cellData?.name
+        infoLabel.text = cellData?.intro
+        guard let imgUrl = cellData?.img else { return }
+        backgroundImgView.kf.setImage(with: URL(string: imgUrl))
+        
     }
 
 }
