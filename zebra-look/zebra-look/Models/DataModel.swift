@@ -1,8 +1,8 @@
 //
 //  DataModel.swift
-//  Street36
+//  zebra-look
 //
-//  Created by alexiuce on 2021/7/24.
+//  Created by alexiuce on 2022/7/24.
 //
 
 import UIKit
@@ -12,6 +12,19 @@ import Foundation
 
 typealias JsonArray = [JsonDict]
 typealias JsonDict = [String : Any]
+
+
+enum ZBUserType: String {
+    case systemUser = "100"
+    case normalUser = "101"
+    case monthMember = "201"
+    case seasonMemeber = "202"
+    case halfYearMember = "203"
+    case yearMember = "204"
+}
+
+
+
 
 protocol CommonModelProtocol : Convertible {
 //    associatedtype ModeType
@@ -62,14 +75,13 @@ struct StHttpResponseData: Convertible {
 class UserAccountManager {
     public static let share = UserAccountManager()
     
-   
     // 用户数据
     public var user : STUserAccount = STUserAccount()
     
     /** 用户是否登录  */
     public var isLogin: Bool {
         get {
-            return user.access_token.count > 2
+            return user.phone.count > 0
         }
     }
     
@@ -116,23 +128,15 @@ class UserAccountManager {
 
 /** 用户数据 */
 struct STUserAccount: CommonModelProtocol {
-    /** 认证级别 */
-//    var levelAuth : UQLevelAuth = .NOAUTH
+   
     /** 用户id */
-    let uid : String = ""
-    /** refresh token */
-    let refresh_token : String = ""
-    /** access token */
-    let access_token : String = ""
-    /** auth token */
-    let auth_token : String = ""
-    /** 过期时间 */
-    let refresh_expired : String = ""
-    /** access token 过期时间 */
-    let access_expired : String = ""
-  
-    /** 用户默认语言 */
-    let defaultLanguage: String = ""
+    let id : Int = 0
+    /** 手机号 */
+    let phone : String = ""
+    /** 用户名 */
+    let username: String = ""
+    /** 用户类型 */
+    var user_type : ZBUserType = .normalUser
     
     /** 昵称  */
     var nickname: String = ""

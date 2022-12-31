@@ -54,12 +54,13 @@ struct API {
 
     // MARK: - 登录模块
     struct Login {
-        static let logout = APIItem("api/user/logout", d: "退出登录",m: .post)
-        static let login = APIItem("api/user/account/login", d: "用户登录",m: .post)
-        static let register = APIItem("api/user/register/email", d: "邮箱注册", m: .post)
-        static let sendCode = APIItem("api/user/email/sendcode", d: "发送验证码",m: .post)
-        static let resetEmailPwd = APIItem("api/user/email/forget/password", d: "重置密码",m: .post)
-        
+        static let login = APIItem("user.auth.login", d: "用户登录",m: .post)
+        static let userInfo = APIItem("user.get.data", d: "用户数据",m: .get)
+//        static let logout = APIItem("api/user/logout", d: "退出登录",m: .post)
+        static let sendCode = APIItem("user.obtain.code", d: "发送验证码",m: .post)
+        static let resetPwd = APIItem("user.update.phone", d: "更新密码",m: .post)
+        static let resetUser = APIItem("user.update.data", d: "更新用户信息",m: .post)
+        static let resetPhone = APIItem("user.update.phone", d: "更新手机号码",m: .post)
     }
     // MARK: - Home模块
     struct Home {
